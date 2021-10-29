@@ -1,0 +1,20 @@
+{application, uauth,
+[
+    {description, "User authorization service"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {uauth_app, []}},
+    {applications,
+        [
+             kernel
+            ,stdlib
+            ,jiffy
+            ,cowboy
+        ]
+    },
+    {env,[]},
+    {modules, []},
+    {licenses, ["none"]},
+    {links, []}
+]
+}.
