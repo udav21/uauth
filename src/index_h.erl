@@ -23,4 +23,5 @@ content_types_provided(Req, State) ->
 
 to_json(Req, State) ->
     Message = [greeting, <<"Hi there!">>],
-    {jiffy:encode(Message, [pretty]), Req, State}.
+    Body = jiffy:encode(Message, [pretty]),
+    {Body, Req, State}.

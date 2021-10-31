@@ -37,6 +37,13 @@ start(_StartType, _StartArgs) ->
 %       UNIQUE KEY `login_UN` (`login`),
 %       KEY `users_login_IDX` (`login`) USING BTREE
 %     ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Таблица пользователей портала'
+%
+%   GRANT ALL PRIVILEGES ON users TO `portal_admin`@`localhost` IDETIFIED BY 'admin'
+%   GRANT ALL PRIVILEGES ON users TO `portal_admin`@`%` IDETIFIED BY 'admin'
+%   OR
+%   GRANT INSERT, SELECT, UPDATE, DELETE ON `users` TO `portal_admin`@`localhost` IDETIFIED BY 'admin'
+%   GRANT INSERT, SELECT, UPDATE, DELETE ON `users` TO `portal_admin`@`localhost` IDETIFIED BY 'admin'
+
 
 %% --------------------------------------------------------
 %% Cowboy start
